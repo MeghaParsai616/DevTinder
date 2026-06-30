@@ -16,7 +16,7 @@ const userAuth = async (req, resp, next) => {
     const {token} = req.cookies;
   try {
     if (token) {
-         const decodedMessage = await jwt.verify(token, "DEV@Tinder$790"); // give a decoded value
+         const decodedMessage = await jwt.verify(token, "DEV@Tinder$970"); // give a decoded value
          console.log("decodedMessage..", decodedMessage);
    
          const user = await User.findById({ _id: decodedMessage._id });
@@ -32,6 +32,7 @@ const userAuth = async (req, resp, next) => {
     resp.status(400).send("Error:  " + err.message);
   }
 };
+
 
 module.exports = {
   adminAuth,

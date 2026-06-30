@@ -13,6 +13,9 @@ const UserSchema = new mongoose.Schema(
     lastName: {
       type: String,
     },
+    photoUrl:{
+       type: String,
+    },
     emailId: {
       type: String,
       required: true,
